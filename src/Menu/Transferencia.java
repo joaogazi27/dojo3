@@ -16,6 +16,7 @@ public class Transferencia extends Menu
             case 1:
                 viaAgencia();
             case 2:
+                viaPix();
                 break;
         }
     }
@@ -33,19 +34,19 @@ public class Transferencia extends Menu
         int opcao = scanner.nextInt();
         scanner.nextLine();
 
-        PIX chave;
+        String chave;
 
-        //switch (opcao) {
+        switch (opcao) {
         //    case 1:
         //        chave = new ChaveCPF();
         //        break;
         //    case 2:
         //        chave = new ChaveEmail();
-        //    case 3:
-        //        chave = new ChaveTelefone();
-        //    case 4:
-        //        chave = new ChaveAleatoria();
-        //}
+          // case 3:
+               // chave = new ChaveTelefone();
+            case 4:
+                chave = PIX.gerarChaveAleatoria();
+        }
 
         System.out.println("Valor: ");
         float valor = scanner.nextFloat();
